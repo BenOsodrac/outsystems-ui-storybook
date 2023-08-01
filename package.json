@@ -1,6 +1,6 @@
 {
-  "name": "outsystems-stencil",
-  "version": "0.3.0",
+  "name": "outsystems-ui-stencil",
+  "version": "0.0.1",
   "description": "Outsystems UI Stencil",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -15,13 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenOsodrac/stencil-card-poc.git"
+    "url": "git+https://github.com/BenOsodrac/outsystems-ui-storybook"
   },
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
+    "setup": "npm run build && npm run storybook",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -60,12 +61,12 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BenOsodrac/stencil-card-poc"
+    "url": "https://github.com/BenOsodrac/outsystems-ui-storybook"
   },
-  "homepage": "https://github.com/BenOsodrac/stencil-card-poc",
+  "homepage": "https://github.com/BenOsodrac/outsystems-ui-storybook",
   "author": {
     "name": "Bernardo Cardoso"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "outsystems-stencil@0.3.0"
+  "_id": "outsystems-stencil@0.0.1"
 }
