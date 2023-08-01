@@ -1,0 +1,33 @@
+:host {
+    // bar
+    --osui-range-bar-background: var(--color-primary);
+    --osui-range-bar-background-active: var(--color-primary-selected);
+    --osui-range-bar-border-radius: var(--border-radius-soft);
+    --osui-range-bar-height: 2px;
+    // range
+    --osui-range-height: 56px;
+    // knob
+    --osui-range-slider-knob-background: var(--color-primary);
+    --osui-range-slider-knob-border-radius: var(--border-radius-soft);
+    --osui-range-slider-knob-shadow: var(--shadow-s);
+    --osui-range-slider-knob-size: 14px;
+    // pin
+    --osui-range-slider-pin-background: var(--color-neutral-7);
+    --osui-range-slider-pin-color: var(--color-neutra-7);
+
+    width: 100%;
+}
+
+:host(ion-range) {
+    --bar-background: var(--osui-range-slider-background);
+    --bar-background-active: var(--osui-range-slider-background-active);
+    --bar-border-radius: var(--osui-range-slider-border-radius);
+    --bar-height: var(--osui-range-slider-height);
+    --height: var(--osui-range-height);
+    --knob-background: var(--osui-range-slider-knob-background);
+    --knob-border-radius: var(--osui-range-slider-knob-border-radius);
+    --knob-box-shadow: var(--osui-range-slider-knob-shadow);
+    --knob-size: var(--osui-range-slider-knob-size);
+    --pin-background: var(--osui-range-slider-pin-background);
+    --pin-color: var(--osui-range-slider-pin-color);
+}

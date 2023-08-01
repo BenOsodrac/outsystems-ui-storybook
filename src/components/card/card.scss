@@ -1,0 +1,64 @@
+:host {
+    --border-radius-rounded: 16px;
+    --osui-card-background-color: var(--color-neutral-0);
+    --osui-card-border-radius: var(--border-radius-soft);
+    --osui-card-grid-template: "header"
+        "content"
+        "footer";
+
+    background-color: var(--osui-card-background-color);
+    background-image: var(--osui-card-image-url);
+    background-repeat: no-repeat;
+    border-radius: var(--osui-card-border-radius);
+    display: grid;
+    grid-template-areas: var(--osui-card-grid-template);
+    grid-template-columns: minmax(auto, 1fr);
+    height: 100%;
+    overflow: hidden;
+}
+
+:host(.osui-card--is-horizontal) {
+    --osui-card-grid-template: "header content"
+        "footer content";
+}
+
+
+:host(.osui-card--is-horizontal.osui-card--is-reverse-column) {
+    --osui-card-grid-template: "content header"
+        "content footer";
+}
+
+:host(:not(.osui-card--is-show-header)) {
+    --osui-card-grid-template: "content"
+        "footer";
+}
+
+:host(:not(.osui-card--is-show-header).osui-card--is-horizontal) {
+    --osui-card-grid-template: "content footer";
+}
+
+:host(:not(.osui-card--is-show-header).osui-card--is-horizontal.osui-card--is-reverse-column) {
+    --osui-card-grid-template: "footer content";
+}
+
+
+:host(:not(.osui-card--is-show-header)) .osui-card__header {
+    display: none;
+}
+
+.osui-card__header,
+.osui-card__footer {
+    padding: var(--space-base);
+}
+
+.osui-card__header {
+    grid-area: header;
+}
+
+.osui-card__content {
+    grid-area: content;
+}
+
+.osui-card__footer {
+    grid-area: footer;
+}
