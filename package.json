@@ -30,7 +30,8 @@
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_459de6ed747f1b6"
+    "chromatic": "npx chromatic --project-token=chpt_459de6ed747f1b6",
+    "build-react-wrappers": "cd react-component-wrappers && npm run build && npm pack"
   },
   "dependencies": {
     "@ionic/react": "^7.2.1",
