@@ -1,6 +1,6 @@
 {
   "name": "outsystems-ui-stencil",
-  "version": "0.0.1",
+  "version": "1.2.0",
   "description": "Outsystems UI Stencil",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
