@@ -176,14 +176,6 @@
     --shadow-m: 0 4px 6px rgba(0, 0, 0, .1);
     --shadow-l: 0 6px 8px rgba(0, 0, 0, .1);
     --shadow-xl: 0 8px 10px rgba(0, 0, 0, .1);
-    
-    /* Atoms */  
-    /* Card */
-    --osui-card-bg: var(--color-neutral-0);
-    --osui-card-border-radius: var(--border-radius-soft);
-    --osui-card-border-size: var(--border-size-s);
-    --osui-card-border-color: var(--color-neutral-4);
-    --osui-card-padding: var(--space-m);
 }
 
 /* ================================================================ */
@@ -211,11 +203,3 @@ body {
     line-height: 1.5;
     margin: 0;
 }
-
-osui-card img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-

@@ -25,6 +25,13 @@
 | `value`          | `value`            |             | `number \| { lower: number; upper: number; }` | `undefined` |
 
 
+## Events
+
+| Event          | Description | Type                                                       |
+| -------------- | ----------- | ---------------------------------------------------------- |
+| `sliderChange` |             | `CustomEvent<number \| { lower: number; upper: number; }>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

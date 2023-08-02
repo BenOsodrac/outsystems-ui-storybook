@@ -43,30 +43,34 @@ export namespace Components {
         "value": number;
     }
 }
+export interface OsuiRangeSliderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLOsuiRangeSliderElement;
+}
 declare global {
     interface HTMLOsuiButtonElement extends Components.OsuiButton, HTMLStencilElement {
     }
     var HTMLOsuiButtonElement: {
         prototype: HTMLOsuiButtonElement;
-        new(): HTMLOsuiButtonElement;
+        new (): HTMLOsuiButtonElement;
     };
     interface HTMLOsuiCardElement extends Components.OsuiCard, HTMLStencilElement {
     }
     var HTMLOsuiCardElement: {
         prototype: HTMLOsuiCardElement;
-        new(): HTMLOsuiCardElement;
+        new (): HTMLOsuiCardElement;
     };
     interface HTMLOsuiRangeSliderElement extends Components.OsuiRangeSlider, HTMLStencilElement {
     }
     var HTMLOsuiRangeSliderElement: {
         prototype: HTMLOsuiRangeSliderElement;
-        new(): HTMLOsuiRangeSliderElement;
+        new (): HTMLOsuiRangeSliderElement;
     };
     interface HTMLOsuiRatingElement extends Components.OsuiRating, HTMLStencilElement {
     }
     var HTMLOsuiRatingElement: {
         prototype: HTMLOsuiRatingElement;
-        new(): HTMLOsuiRatingElement;
+        new (): HTMLOsuiRatingElement;
     };
     interface HTMLElementTagNameMap {
         "osui-button": HTMLOsuiButtonElement;
@@ -97,6 +101,7 @@ declare namespace LocalJSX {
         "max"?: number;
         "min"?: number;
         "name"?: string;
+        "onSliderChange"?: (event: OsuiRangeSliderCustomEvent<RangeValue>) => void;
         "pin"?: boolean;
         "snaps"?: boolean;
         "step"?: number;

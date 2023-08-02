@@ -1,6 +1,6 @@
 import { Component, Prop, Watch, h, Element } from '@stencil/core';
 import { CssClass, CssCustomProperties } from './enum';
-import { ICard } from './cardInterface';
+import { ICard } from './interface';
 import { alignment, border } from '../global-enum';
 import { setStyleAttribute } from '../../utils/utils';
 
