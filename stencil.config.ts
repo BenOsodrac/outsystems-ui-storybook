@@ -23,7 +23,7 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'outsystems-ui-stencil',
       proxiesFile:
-        '/Users/bernardo.cardoso/nx-stencil/packages/core-components-react/src/generated/components.ts',
+        './react-component-wrappers/src/generated/components.ts',
       includeDefineCustomElements: true,
     }),
   ],

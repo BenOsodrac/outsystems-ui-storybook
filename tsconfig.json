@@ -18,7 +18,8 @@
     "jsxFactory": "h"
   },
   "include": [
-    "src"
+    "src",
+    "core-components-react"
   ],
   "exclude": [
     "node_modules"
