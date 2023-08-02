@@ -1,6 +1,6 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Listen, State, Event, EventEmitter, Element } from '@stencil/core';
 import { IOSUIRangeSlider, RangeValue } from './interface';
-//import { CssClass } from './enum';
+import { CssClass } from './enum';
 
 @Component({
     tag: 'osui-range-slider',
@@ -9,6 +9,10 @@ import { IOSUIRangeSlider, RangeValue } from './interface';
 })
 
 export class OSUIRangeSlider implements IOSUIRangeSlider {
+    @Element() selfElement: HTMLElement;
+
+    @State() currentValue: RangeValue;
+
     @Prop() activeBarStart?: number;
     @Prop() debounce?: number;
     @Prop() disabled: boolean;
@@ -23,6 +27,27 @@ export class OSUIRangeSlider implements IOSUIRangeSlider {
     @Prop() step: number;
     @Prop() ticks: boolean;
     @Prop() value: RangeValue;
+
+    @Event({
+        eventName: 'sliderChange',
+        composed: true,
+        cancelable: true,
+        bubbles: false,
+    }) sliderChange: EventEmitter<RangeValue>;
+
+    onChangeHandler(value: RangeValue) {
+        this.sliderChange.emit(value);
+    }
+
+    @Listen('ionChange')
+    ionChangeHandler(event) {
+        this.currentValue = event.detail.value;
+        this.onChangeHandler(event.detail.value);
+    }
+
+    connectedCallback() {
+        this.selfElement.classList.add(CssClass.Pattern);
+    }
 
     render() {
         return [
