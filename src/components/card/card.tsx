@@ -1,7 +1,7 @@
 import { Component, Prop, Watch, h, Element } from '@stencil/core';
 import { CssClass, CssCustomProperties } from './enum';
 import { ICard } from './cardInterface';
-import { alignment, border } from '../globalEnum';
+import { alignment, border } from '../global-enum';
 import { setStyleAttribute } from '../../utils/utils';
 
 @Component({

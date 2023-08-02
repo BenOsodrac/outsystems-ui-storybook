@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { alignment, border } from "./components/globalEnum";
+import { alignment, border } from "./components/global-enum";
 import { RangeValue } from "./components/range-slider/interface";
 export namespace Components {
     interface OsuiButton {
@@ -48,25 +48,25 @@ declare global {
     }
     var HTMLOsuiButtonElement: {
         prototype: HTMLOsuiButtonElement;
-        new (): HTMLOsuiButtonElement;
+        new(): HTMLOsuiButtonElement;
     };
     interface HTMLOsuiCardElement extends Components.OsuiCard, HTMLStencilElement {
     }
     var HTMLOsuiCardElement: {
         prototype: HTMLOsuiCardElement;
-        new (): HTMLOsuiCardElement;
+        new(): HTMLOsuiCardElement;
     };
     interface HTMLOsuiRangeSliderElement extends Components.OsuiRangeSlider, HTMLStencilElement {
     }
     var HTMLOsuiRangeSliderElement: {
         prototype: HTMLOsuiRangeSliderElement;
-        new (): HTMLOsuiRangeSliderElement;
+        new(): HTMLOsuiRangeSliderElement;
     };
     interface HTMLOsuiRatingElement extends Components.OsuiRating, HTMLStencilElement {
     }
     var HTMLOsuiRatingElement: {
         prototype: HTMLOsuiRatingElement;
-        new (): HTMLOsuiRatingElement;
+        new(): HTMLOsuiRatingElement;
     };
     interface HTMLElementTagNameMap {
         "osui-button": HTMLOsuiButtonElement;

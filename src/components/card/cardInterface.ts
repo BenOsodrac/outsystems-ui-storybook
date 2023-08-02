@@ -1,5 +1,5 @@
-import { alignment } from '../globalEnum';
-import { IPattern } from "../patternInterface";
+import { alignment } from '../global-enum';
+import { IPattern } from "../pattern-interface";
 
 export interface ICard extends IPattern {
     alignment: alignment;
