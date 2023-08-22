@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
     tag: 'osui-button',
@@ -7,9 +7,11 @@ import { Component, h } from '@stencil/core';
 })
 
 export class OSUIButton {
+    @Prop() dataButton: string;
+
     render() {
         return [
-            <ion-button expand="full" shape="round"> <slot>Custom Ionic Button!</slot> </ion-button >
+            <ion-button data-button={this.dataButton}> <slot>Custom Ionic Button!</slot> </ion-button >
         ]
     }
 }
