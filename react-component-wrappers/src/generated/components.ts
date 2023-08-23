@@ -3,7 +3,7 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import type { JSX } from 'outsystems-ui-stencil';
+import { JSX } from 'outsystems-ui-stencil';
 
 import { defineCustomElements } from 'outsystems-ui-stencil/loader';
 

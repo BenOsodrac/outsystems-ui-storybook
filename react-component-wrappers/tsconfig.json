@@ -3,16 +3,17 @@
     "outDir": "./dist",
     "lib": [
       "dom",
-      "es2015"
+      "ESNext"
     ],
-    "module": "es2015",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "target": "es2015",
+    "target": "ESNext",
     "skipLibCheck": true,
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationDir": "./dist/types"
+    "declarationDir": "./dist/types",
+    "strict": true
   },
   "include": [
     "src"

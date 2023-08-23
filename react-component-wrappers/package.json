@@ -17,5 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "outsystems-ui-stencil": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.2.7"
   }
 }
