@@ -9,6 +9,7 @@ import { alignment, border } from "./components/global-enum";
 import { RangeValue } from "./components/range-slider/interface";
 export namespace Components {
     interface OsuiButton {
+        "dataButton": string;
     }
     interface OsuiCard {
         "alignment": alignment;
@@ -18,6 +19,8 @@ export namespace Components {
         "showContent": boolean;
         "showFooter": boolean;
         "showHeader": boolean;
+    }
+    interface OsuiModel {
     }
     interface OsuiRangeSlider {
         "activeBarStart"?: number;
@@ -43,6 +46,10 @@ export namespace Components {
         "value": number;
     }
 }
+export interface OsuiModelCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLOsuiModelElement;
+}
 export interface OsuiRangeSliderCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLOsuiRangeSliderElement;
@@ -60,6 +67,12 @@ declare global {
         prototype: HTMLOsuiCardElement;
         new (): HTMLOsuiCardElement;
     };
+    interface HTMLOsuiModelElement extends Components.OsuiModel, HTMLStencilElement {
+    }
+    var HTMLOsuiModelElement: {
+        prototype: HTMLOsuiModelElement;
+        new (): HTMLOsuiModelElement;
+    };
     interface HTMLOsuiRangeSliderElement extends Components.OsuiRangeSlider, HTMLStencilElement {
     }
     var HTMLOsuiRangeSliderElement: {
@@ -75,12 +88,14 @@ declare global {
     interface HTMLElementTagNameMap {
         "osui-button": HTMLOsuiButtonElement;
         "osui-card": HTMLOsuiCardElement;
+        "osui-model": HTMLOsuiModelElement;
         "osui-range-slider": HTMLOsuiRangeSliderElement;
         "osui-rating": HTMLOsuiRatingElement;
     }
 }
 declare namespace LocalJSX {
     interface OsuiButton {
+        "dataButton"?: string;
     }
     interface OsuiCard {
         "alignment"?: alignment;
@@ -90,6 +105,9 @@ declare namespace LocalJSX {
         "showContent"?: boolean;
         "showFooter"?: boolean;
         "showHeader"?: boolean;
+    }
+    interface OsuiModel {
+        "onModelToggle"?: (event: OsuiModelCustomEvent<boolean>) => void;
     }
     interface OsuiRangeSlider {
         "activeBarStart"?: number;
@@ -116,6 +134,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "osui-button": OsuiButton;
         "osui-card": OsuiCard;
+        "osui-model": OsuiModel;
         "osui-range-slider": OsuiRangeSlider;
         "osui-rating": OsuiRating;
     }
@@ -126,6 +145,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "osui-button": LocalJSX.OsuiButton & JSXBase.HTMLAttributes<HTMLOsuiButtonElement>;
             "osui-card": LocalJSX.OsuiCard & JSXBase.HTMLAttributes<HTMLOsuiCardElement>;
+            "osui-model": LocalJSX.OsuiModel & JSXBase.HTMLAttributes<HTMLOsuiModelElement>;
             "osui-range-slider": LocalJSX.OsuiRangeSlider & JSXBase.HTMLAttributes<HTMLOsuiRangeSliderElement>;
             "osui-rating": LocalJSX.OsuiRating & JSXBase.HTMLAttributes<HTMLOsuiRatingElement>;
         }
